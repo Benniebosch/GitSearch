@@ -1,0 +1,12 @@
+<!-- The Modal -->
+<div id="id01" [style.display]="display ? 'block' : 'none' " class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container w3-padding">
+      <h4>{{context?.message}}</h4>
+      <div class="w3-center">
+        <span (click)="confirm(true)" class="w3-button w3-blue">Ok</span>
+        <span (click)="confirm(false)" class="w3-button w3-gray">Cancel</span>
+      </div>
+    </div>
+  </div>
+</div>

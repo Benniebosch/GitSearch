@@ -1,0 +1,11 @@
+.remove-btn {
+    display: none;
+}
+
+.w3-card:hover {
+    .remove-btn {
+        display: 'inline-block';
+    }
+}
+
+
