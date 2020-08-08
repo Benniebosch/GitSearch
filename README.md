@@ -13,10 +13,10 @@ Github repository search application
 - Switch to SeriLogger/Log4Net and use its file appender.
 - Configure the current Microsoft logging framework to use its available Event Source/Windows Event Log providers.
 
-4. **Add favorite Api, Validate search result item hasn't changed.**
+4. **Validate search result item hasn't changed**
 - **Solution A** - Compute and compare hash with MD5 algorithm.  
 Search query Api - Computed hash field to any result item (server).  
 Add favorite Api - Client sends result item and its computed hash, server compute result item hash and compare it with client's hash.
 
-- **Solution B**
-- Add favorite Api - Client repository id, server fetch the original result item by the id from local cache or Git search servce.  
+- **Solution B**  
+ Add favorite Api - Client sends only repository id, server fetch the original result item by the id using Git search servce or local cache.  
