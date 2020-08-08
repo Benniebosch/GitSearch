@@ -15,9 +15,8 @@ Github repository search application
 
 4. **Add favorite Api, Validate search result item hasn't changed.**
 - **Solution A** - Compute and compare hash with MD5 algorithm.  
-Search query Api, computed hash field to any result item (server).  
-Add favorite Api client sends result item and its computed hash,  		      
-server compute result item hash and compare it with client's hash  
+Search query Api - computed hash field to any result item (server).  
+Add favorite Api - client sends result item and its computed hash, server compute result item hash and compare it with client's hash  
 
 - **Solution B** - Add favorite Api, Client sends only the repository id of the result item,  
 Server fetch the original item from cache or from GitHub.  
