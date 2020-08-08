@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using TibaWebApi.Models;
+using GitSearch.Core.Entities;
+using GitSearch.Core.Models;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Core.Services
 {
     public interface IFavoriteService
     {

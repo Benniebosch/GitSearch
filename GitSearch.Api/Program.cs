@@ -3,9 +3,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
-using TibaWebApi.AppCode;
+using GitSearch.Api.AppCode;
+using GitSearch.Core.Entities;
 
-namespace TibaWebApi
+namespace GitSearch.Api
 {
     public class Program
     {
@@ -29,7 +30,7 @@ namespace TibaWebApi
                 var logger = services.GetRequiredService<ILogger<Program>>();
                 try
                 {
-                    var context = services.GetRequiredService<TibaDbContext>();
+                    var context = services.GetRequiredService<GitSearchDbContext>();
                     DbInitializer.Initialize(context);
                     logger.LogInformation("Init database done.");
                 }

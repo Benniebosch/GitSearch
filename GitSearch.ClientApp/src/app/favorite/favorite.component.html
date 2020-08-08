@@ -1,5 +1,6 @@
+<!--<code>{{item | json}}</code> -->
+
 <div class="w3-card w3-padding w3-margin" *ngFor="let item of items"> 
-    <!--<code>{{item | json}}</code> -->
     <div class="w3-display-container"> 
         <span (click)="remove(item)" class="w3-button w3-large w3-display-topright">×</span>
         <h4><strong>{{item.full_name}}</strong></h4>
@@ -7,7 +8,12 @@
     <div>
         <span class="w3-tag w3-large w3-red">{{item.open_issues}}&nbsp;<i class="fa fa-bug" aria-hidden="true"></i></span>&nbsp;&nbsp;
         <span class="w3-tag w3-large w3-orange">{{item.forks}}&nbsp;<i class="fa fa-code-fork" aria-hidden="true"></i></span>&nbsp;&nbsp;
-        <span class="w3-tag w3-large w3-blue">{{item.watchers}}&nbsp;<i class="fa fa-eye" aria-hidden="true"></i></span>
+        <span class="w3-tag w3-large w3-blue">{{item.watchers}}&nbsp;<i class="fa fa-eye" aria-hidden="true"></i></span>&nbsp;&nbsp;
+
+        <!-- (click)="openLink(item.html_url)" -->
+        <a class="w3-tag w3-large w3-light-grey" [href]="item.html_url | safe: 'url'" target="_blank" >
+            <i class="fa fa-link"></i>
+        </a>
     </div>
     <p>
         {{item.description}}

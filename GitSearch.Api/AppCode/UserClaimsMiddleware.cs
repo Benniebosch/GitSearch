@@ -5,7 +5,7 @@
 //using System.Security.Claims;
 //using System.Threading.Tasks;
 
-//namespace TibaWebApi.AppCode
+//namespace GitSearch.Api.AppCode
 //{
 //    public class UserClaimsMiddleware
 //    {

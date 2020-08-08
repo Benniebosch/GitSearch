@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using GitSearch.Core.Models;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,10 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Core.Services
 {
     public class SearchService : ISearchService
     {
-        const string gitSearchrepositoriesUrl = "https://api.github.com/search/repositories?q={query}&sort=stars&order=desc";
-
         private readonly ILogger<SearchService> _logger;
         private readonly GitSearchOptions _gitSearchOptions;
         private readonly HttpClient _httpClient;
@@ -38,7 +37,7 @@ namespace TibaWebApi.AppCode
             _logger.LogDebug($"builder.Uri:{builder.Uri}");
 
             var request = new HttpRequestMessage(HttpMethod.Get, builder.Uri);
-            request.Headers.Add("User-Agent", "TibaTestApi");
+            request.Headers.Add("User-Agent", "GitSearch.Api");
             request.Headers.Add("Accept", "application/json");
 
             var response = await _httpClient.SendAsync(request);

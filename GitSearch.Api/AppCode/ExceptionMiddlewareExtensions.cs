@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 //using Serilog;
 using System.Net;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Api.AppCode
 {
 
     public static class ExceptionMiddlewareExtensions

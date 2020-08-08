@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Numerics;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Core.Models
 {
     public class GitSearchOptions
     {

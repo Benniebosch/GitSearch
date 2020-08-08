@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Core.Services
 {
     public interface ISearchService
     {

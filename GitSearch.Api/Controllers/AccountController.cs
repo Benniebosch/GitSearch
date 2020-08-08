@@ -2,7 +2,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace TibaWebApi.Controllers
+namespace GitSearch.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

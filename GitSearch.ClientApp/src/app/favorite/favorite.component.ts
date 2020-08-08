@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FavoriteService } from '../favorite.service';
 import { GitSearchResultItem } from '../models';
+import { SafePipe } from '../safe.pipe';
+import { SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-favorite',
@@ -9,8 +11,9 @@ import { GitSearchResultItem } from '../models';
 })
 export class FavoriteComponent implements OnInit {
   items: GitSearchResultItem[];
+  windowOpen = window.open;
 
-  constructor(public srv:FavoriteService) { }
+  constructor(public srv:FavoriteService) { } //private safePipe: SafePipe
 
   ngOnInit(): void {
     this.srv.getItems().subscribe(res=>{
@@ -28,5 +31,11 @@ export class FavoriteComponent implements OnInit {
       this.items = this.items.filter(f=>f!=item);
     });
   }
+
+  // openLink(url: string){
+  //   let safeUrl = this.safePipe.transform(url, 'url') as SafeUrl
+  //   //safeUrl.
+  //   //window.open(safeUrl.)
+  // }
 
 }

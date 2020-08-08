@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TibaWebApi.Models;
+using GitSearch.Core.Models;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Core.Entities
 {
-    public class TibaDbContext : DbContext
+    public class GitSearchDbContext : DbContext
     {
-        public TibaDbContext(DbContextOptions<TibaDbContext> options): base(options)
+        public GitSearchDbContext(DbContextOptions<GitSearchDbContext> options): base(options)
         {
         }
 

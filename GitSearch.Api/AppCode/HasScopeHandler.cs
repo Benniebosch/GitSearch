@@ -2,7 +2,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Api.AppCode
 {
     public class HasScopeHandler : AuthorizationHandler<HasScopeRequirement>
     {

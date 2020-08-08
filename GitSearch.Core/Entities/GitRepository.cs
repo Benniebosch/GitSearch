@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TibaWebApi.Models
+namespace GitSearch.Core.Entities
 {
     public class GitRepository
     {

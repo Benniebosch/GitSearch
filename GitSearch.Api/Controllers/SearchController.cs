@@ -4,12 +4,12 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using GitSearch.Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TibaWebApi.AppCode;
 
-namespace TibaWebApi.Controllers
+namespace GitSearch.Api.Controllers
 {
     
     [ApiController]

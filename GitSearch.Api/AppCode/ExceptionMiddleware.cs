@@ -3,9 +3,9 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using TibaWebApi.Models;
+using GitSearch.Core.Models;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Api.AppCode
 {
     public class ExceptionMiddleware
     {

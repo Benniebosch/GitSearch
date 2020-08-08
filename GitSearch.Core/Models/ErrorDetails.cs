@@ -1,6 +1,6 @@
-﻿namespace TibaWebApi.Models
+﻿namespace GitSearch.Core.Models
 {
-    internal class ErrorDetails
+    public class ErrorDetails
     {
         public ErrorDetails()
         {

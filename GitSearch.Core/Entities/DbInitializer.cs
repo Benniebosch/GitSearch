@@ -1,22 +1,21 @@
-﻿using System;
+﻿using GitSearch.Core.Entities;
+using GitSearch.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TibaWebApi.Models;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Api.AppCode
 {
     public static class DbInitializer
     {
 
-        public static void Initialize(TibaDbContext context)
+        public static void Initialize(GitSearchDbContext context)
         {
-            if (context.GitRepository.Any())
-            {
+            var dbAlreadyExisted = !context.Database.EnsureCreated();
+            if (dbAlreadyExisted) {
                 return;
             }
-
-            context.Database.EnsureCreated();
 
             var gri = new GitRepository[]
             {

@@ -10,16 +10,17 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Web;
-using TibaWebApi.Models;
+using GitSearch.Core.Entities;
+using GitSearch.Core.Models;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Core.Services
 {
     public class FavoriteService : IFavoriteService
     {
         private readonly ILogger<SearchService> _logger;
-        private readonly TibaDbContext _context;
+        private readonly GitSearchDbContext _context;
 
-        public FavoriteService(ILogger<SearchService> logger, TibaDbContext context)
+        public FavoriteService(ILogger<SearchService> logger, GitSearchDbContext context)
         {
             _logger = logger;
             _context = context;

@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Authorization;
 
-namespace TibaWebApi.AppCode
+namespace GitSearch.Api.AppCode
 {
     public class HasScopeRequirement : IAuthorizationRequirement
     {

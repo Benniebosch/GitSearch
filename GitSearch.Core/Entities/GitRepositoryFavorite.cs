@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TibaWebApi.Models
+namespace GitSearch.Core.Entities
 {
     public class GitRepositoryFavorite
     {

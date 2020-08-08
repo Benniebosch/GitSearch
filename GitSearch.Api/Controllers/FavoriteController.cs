@@ -8,10 +8,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TibaWebApi.AppCode;
-using TibaWebApi.Models;
+using GitSearch.Api.AppCode;
+using GitSearch.Core.Services;
+using GitSearch.Core.Entities;
 
-namespace TibaWebApi.Controllers
+namespace GitSearch.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -35,6 +36,7 @@ namespace TibaWebApi.Controllers
         }
 
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> AddItem(GitRepository item)
         {
             await _srv.AddFavorite(GetUserId(), item);
@@ -52,6 +54,7 @@ namespace TibaWebApi.Controllers
             var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
             if (string.IsNullOrWhiteSpace(userId))
             {
+                //new BadRequestObjectResult(context.ModelState);
                 throw new Exception("user not found");
             }
 

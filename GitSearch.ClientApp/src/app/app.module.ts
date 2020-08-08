@@ -13,6 +13,7 @@ import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 
 import { InterceptorService } from './interceptor.service'
 import { AuthGuard } from './auth/auth.guard';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AuthGuard } from './auth/auth.guard';
     FavoriteComponent,
 
     AlertComponent,
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

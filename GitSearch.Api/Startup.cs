@@ -6,9 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TibaWebApi.AppCode;
+using GitSearch.Api.AppCode;
+using GitSearch.Core.Models;
+using GitSearch.Core.Services;
+using GitSearch.Core.Entities;
 
-namespace TibaWebApi
+namespace GitSearch.Api
 {
     public class Startup
     {
@@ -60,7 +63,7 @@ namespace TibaWebApi
 
             services.Configure<GitSearchOptions>(Configuration.GetSection(GitSearchOptions.GitSearch));
 
-            services.AddDbContext<TibaDbContext>(options =>
+            services.AddDbContext<GitSearchDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddSingleton<ISearchService, SearchService>();
