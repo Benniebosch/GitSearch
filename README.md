@@ -3,10 +3,10 @@ Github repository search application
 
 # Open issues
 
-1. **Api requests rate limiter** using sliding window of fix window algorithm.
+1. **Api requests rate limiter** using Sliding Window or Fix Window algorithm.
 
 2. **Cache api results**
- - Client cache options - Http cache interceptor with custom http request header, window local session storage, Angular cache service.
+ - Client cache options - Http cache interceptor with custom request header, window local session storage, Angular cache service.
  - Server cache options - using LRU algorithm, Redis in memory cache and time expiration keys.
 
 3. **Logging options**
